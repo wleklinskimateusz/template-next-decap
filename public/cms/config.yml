@@ -1,7 +1,7 @@
 backend:
   name: github
-  repo: wleklinskimateusz/notes
-  base_url: https://github.com/
+  repo: https://github.com/wleklinskimateusz/template-next-decap
+  base_url: https://github.com/wleklinskimateusz/template-next-decap/
   branch: main # Branch to update (optional; defaults to master)
 publish_mode: editorial_workflow
 media_folder: "public/images/uploads"
