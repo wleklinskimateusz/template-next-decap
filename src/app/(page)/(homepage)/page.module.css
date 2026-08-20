@@ -1,0 +1,24 @@
+.cardRow {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.titles {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.titles h1 {
+  font-size: 90px;
+}
+
+.titles h2 {
+  font-size: 48px;
+  color: var(--primary-color);
+  background: white;
+  padding: 10px 20px;
+  margin-top: 0;
+}

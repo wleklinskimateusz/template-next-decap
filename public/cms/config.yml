@@ -1,0 +1,73 @@
+backend:
+  name: github
+  repo: wleklinskimateusz/notes
+  base_url: https://github.com/
+  branch: main # Branch to update (optional; defaults to master)
+publish_mode: editorial_workflow
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+# when using the default proxy server port
+local_backend: true
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "-"
+collections:
+  - name: "aktualnosci" # Used in routes, e.g., /admin/collections/blog
+    label: "Aktualności" # Used in the UI
+    folder: "src/content/newsfeed" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - label: "Seo Title"
+        name: "seoTitle"
+        widget: "string"
+      - label: "Seo Description"
+        name: "seoDescription"
+        widget: "text"
+      - label: "Seo Tags"
+        name: "seoTags"
+        widget: "list"
+      - label: "Layout"
+        name: "layout"
+        widget: "hidden"
+        default: "blog"
+      - label: "Tytuł"
+        name: "title"
+        widget: "string"
+      - label: "Skrócony opis"
+        name: "description"
+        widget: "text"
+      - label: "Data publikacji"
+        name: "date"
+        widget: "datetime"
+        date_format: "YYYY-MM-DD"
+        format: "YYYY-MM-DD"
+        time_format: false
+      - label: "Obrazek"
+        name: "image"
+        widget: "image"
+        required: false
+      - label: "Zawartość"
+        name: "body"
+        widget: "markdown"
+  - name: "pages"
+    label: "Strony"
+    files: 
+      - label: "Strona Główna"
+        name: "homepage"
+        file: "src/content/homepage.json"
+        format: "json"
+        fields:
+          - label: "Seo Title"
+            name: "seoTitle"
+            widget: "string"
+          - label: "Seo Description"
+            name: "seoDescription"
+            widget: "text"
+          - label: "Seo Tags"
+            name: "seoTags"
+            widget: "list"
+          - label: "Hero Tytuł"
+            name: "heroTitle"
+            widget: "string"

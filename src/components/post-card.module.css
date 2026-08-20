@@ -1,0 +1,22 @@
+.postCard {
+  background: white;
+}
+
+.imago {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.postTexts {
+  padding: 0 20px 20px;
+}
+
+.postDate {
+  font-size: 1rem;
+}
+
+.postCard a {
+  color: inherit;
+  text-decoration: none;
+}
