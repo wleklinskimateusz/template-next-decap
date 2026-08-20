@@ -1,3 +1,4 @@
+import { redirect } from "next/navigation";
 import Script from "next/script";
 
 
@@ -19,10 +20,6 @@ export const viewport = {
 };
 
 export default function AdminPage() {
-  return (
-    <>
-      <link href="/cms/config.yml" type="text/yaml" rel="cms-config-url" />
-      <Script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></Script>
-    </>
-  );
+  redirect("/admin/index.html")
+
 }
