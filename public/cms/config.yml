@@ -1,13 +1,12 @@
 backend:
   name: github
-  repo: https://github.com/wleklinskimateusz/template-next-decap
-  base_url: https://github.com/wleklinskimateusz/template-next-decap/
+  repo: wleklinskimateusz/template-next-decap
   branch: main # Branch to update (optional; defaults to master)
+  auth_methods: [oauth]
 publish_mode: editorial_workflow
 media_folder: "public/images/uploads"
 public_folder: "/images/uploads"
 # when using the default proxy server port
-local_backend: true
 slug:
   encoding: "ascii"
   clean_accents: true

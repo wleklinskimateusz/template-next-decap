@@ -22,7 +22,7 @@ export default function AdminPage() {
   return (
     <>
       <link href="/cms/config.yml" type="text/yaml" rel="cms-config-url" />
-      <Script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></Script>
+      <Script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></Script>
     </>
   );
 }
