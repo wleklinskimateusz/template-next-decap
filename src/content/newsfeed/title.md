@@ -7,7 +7,7 @@ layout: blog
 title: Title
 description: Opis
 date: 2026-08-27
-image: /images/uploads/Screenshot from 2026-03-16 23-17-11.png
+image: /images/uploads/Screenshot from 2025-11-04 18-11-53.png
 ---
 
 no tak
