@@ -1,4 +1,3 @@
-# Use DecapBridge PKCE auth (required)
 backend:
   name: github
   repo: wleklinskimateusz/template-next-decap
