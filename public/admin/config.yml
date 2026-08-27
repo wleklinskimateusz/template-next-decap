@@ -11,7 +11,8 @@ backend:
     openAuthoring: '{{message}}'
 publish_mode: editorial_workflow
 media_folder: "public/images/uploads"
-public_folder: "images/uploads"
+site_url: "https://wleklinskimateusz.github.io/template-next-decap"
+public_folder: "/images/uploads"
 # when using the default proxy server port
 slug:
   encoding: "ascii"
