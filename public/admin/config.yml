@@ -1,8 +1,14 @@
+# Use DecapBridge PKCE auth (required)
 backend:
   name: github
   repo: wleklinskimateusz/template-next-decap
-  branch: main # Branch to update (optional; defaults to master)
-  auth_methods: [oauth]
+  commit_messages:
+    create: 'Create {{collection}} "{{slug}}"'
+    update: 'Update {{collection}} "{{slug}}"'
+    delete: 'Delete {{collection}} "{{slug}}"'
+    uploadMedia: 'Upload "{{path}}"'
+    deleteMedia: 'Delete "{{path}}"'
+    openAuthoring: '{{message}}'
 publish_mode: editorial_workflow
 media_folder: "public/images/uploads"
 public_folder: "/images/uploads"

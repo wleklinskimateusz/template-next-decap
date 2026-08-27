@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
   },
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
   basePath: process.env.PAGES_BASE_PATH,
-  assetPrefix: "/template-next-decap/",
+  assetPrefix: process.env.PAGES_BASE_PATH,
 };
 
 export default nextConfig;
