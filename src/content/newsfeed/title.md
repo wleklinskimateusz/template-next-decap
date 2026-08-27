@@ -12,4 +12,4 @@ image: /template-next-decap/images/uploads/gilotyna.png
 
 no tak
 
-gilotynka![](/images/uploads/Screenshot%20from%202026-03-16%2023-17-11.png)
+gilotynka![](/template-next-decap/images/uploads/gilotyna.png)
