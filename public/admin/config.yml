@@ -1,6 +1,7 @@
 backend:
   name: github
   repo: wleklinskimateusz/template-next-decap
+
   commit_messages:
     create: 'Create {{collection}} "{{slug}}"'
     update: 'Update {{collection}} "{{slug}}"'
@@ -10,7 +11,7 @@ backend:
     openAuthoring: '{{message}}'
 publish_mode: editorial_workflow
 media_folder: "public/images/uploads"
-public_folder: "/images/uploads"
+public_folder: "images/uploads"
 # when using the default proxy server port
 slug:
   encoding: "ascii"
