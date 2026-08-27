@@ -7,7 +7,7 @@ layout: blog
 title: Title
 description: Opis
 date: 2026-08-27
-image: /images/uploads/Screenshot from 2025-11-04 18-11-53.png
+image: /template-next-decap/images/uploads/gilotyna.png
 ---
 
 no tak
