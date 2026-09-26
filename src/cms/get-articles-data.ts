@@ -3,7 +3,7 @@ import { z } from "zod";
 import path from "path";
 import matter from "gray-matter";
 
-const newsfeedSchema = z.object({
+const articleSchema = z.object({
   frontmatter: z.object({
     layout: z.string(),
     title: z.string(),
@@ -16,29 +16,29 @@ const newsfeedSchema = z.object({
   }),
 });
 
-export const getNewsfeedFileMetadata = async (file: string) => {
+export const getArticleFileMetadata = async (file: string) => {
   const filePath = path.join(
     process.cwd(),
-    "src/content/newsfeed",
+    "src/content/articles",
     `${file}.md`,
   );
 
   try {
     const fileContent = await fs.readFile(filePath, "utf-8");
     const { data: frontmatter } = matter(fileContent);
-    const result = newsfeedSchema.parse({ frontmatter });
+    const result = articleSchema.parse({ frontmatter });
     return result.frontmatter;
   } catch (error) {
-    console.error(`Failed to read newsfeed file: ${file}`, error);
+    console.error(`Failed to read article file: ${file}`, error);
     throw error;
   }
 };
-export const getNewsfeedData = async () => {
-  const files = await fs.readdir("src/content/newsfeed");
+export const getArticleData = async () => {
+  const files = await fs.readdir("src/content/articles");
   const newsfeedData = files.map(async (file) => {
     const path = file.replace(".md", "");
     const { layout, title, description, date, image } =
-      await getNewsfeedFileMetadata(path);
+      await getArticleFileMetadata(path);
 
     return { path, layout, title, description, date, image };
   });

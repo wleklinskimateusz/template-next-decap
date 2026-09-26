@@ -1,6 +1,6 @@
-import { getNewsfeedData } from "@/cms/get-newsfeed-data";
+import { getArticleData } from "@/cms/get-articles-data";
 import homepage from "@/content/homepage.json";
-import { NewsfeedItems } from "@/components/newsfeed-item";
+import { ArticlesItems } from "@/components/articles-items";
 import Image from "next/image";
 import styles from "./page.module.css";
 
@@ -15,7 +15,7 @@ export const metadata = {
 };
 
 export default async function Home() {
-  const newsfeedData = await getNewsfeedData();
+  const articlesData = await getArticleData();
 
   return (
     <>
@@ -36,7 +36,7 @@ export default async function Home() {
       </section>
       <section className="container">
         <h2>Aktualności</h2>
-        <NewsfeedItems newsfeedData={newsfeedData.slice(0, 3)} />
+        <ArticlesItems articlesData={articlesData.slice(0, 3)} />
       </section>
     </>
   );

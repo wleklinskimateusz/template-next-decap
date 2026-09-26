@@ -1,5 +1,5 @@
-import { getNewsfeedData } from "@/cms/get-newsfeed-data";
-import { NewsfeedItems } from "@/components/newsfeed-item";
+import { getArticleData } from "@/cms/get-articles-data";
+import { ArticlesItems } from "@/components/articles-items";
 
 
 export const metadata = {
@@ -8,12 +8,12 @@ export const metadata = {
 };
 
 export default async function Aktualnosci() {
-  const newsfeedData = await getNewsfeedData();
+  const articlesData = await getArticleData();
 
   return (
     <div>
       <h1>Aktualności</h1>
-      <NewsfeedItems newsfeedData={newsfeedData} />
+      <ArticlesItems articlesData={articlesData} />
     </div>
   );
 }
