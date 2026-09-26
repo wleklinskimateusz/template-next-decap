@@ -37,6 +37,11 @@ collections:
         date_format: "YYYY-MM-DD"
         format: "YYYY-MM-DD"
         time_format: false
+      - label: "Temat"
+        name: "category"
+        widget: "string"
+        required: false
+        hint: "Krótka etykieta, np. Kultura, Nauka, Podróże"
       - label: "Zawartość"
         name: "body"
         widget: "markdown"

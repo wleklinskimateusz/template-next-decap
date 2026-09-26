@@ -8,6 +8,7 @@ export type PostCardProps = {
   title: string;
   description: string;
   date: Date;
+  category?: string;
 };
 
 export const PostCard = ({
@@ -16,10 +17,11 @@ export const PostCard = ({
   title,
   description,
   date,
+  category,
 }: PostCardProps) => {
   return (
     <div className={styles.postCard}>
-      <Link href={`/aktualnosci/${path}`}>
+      <Link className={styles.cardLink} href={`/aktualnosci/${path}`}>
         {image && (
           <Image
             src={image}
@@ -29,12 +31,26 @@ export const PostCard = ({
             className={styles.imago}
           />
         )}
+        {!image && (
+          <div className={styles.imagePlaceholder} aria-hidden="true">
+            <span>{category || "E-zin"}</span>
+            <i />
+          </div>
+        )}
         <div className={styles.postTexts}>
-          <h3>{title}</h3>
-          <p>{description}</p>
-          <p className={styles.postDate}>
-            {date.toLocaleDateString()}
-          </p>
+          <div className={styles.postMeta}>
+            <span className={styles.category}>{category || "Artykuł"}</span>
+            <time dateTime={date.toISOString()} className={styles.postDate}>
+              {date.toLocaleDateString("pl-PL", {
+                day: "numeric",
+                month: "short",
+                year: "numeric",
+              })}
+            </time>
+          </div>
+          <h2 className={styles.postTitle}>{title}</h2>
+          <p className={styles.postDescription}>{description}</p>
+          <span className={styles.readMore}>Czytaj artykuł <span aria-hidden="true">↗</span></span>
         </div>
       </Link>
     </div>

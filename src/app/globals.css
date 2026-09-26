@@ -1,13 +1,43 @@
+:root {
+  /* Change these tokens to quickly re-theme the site. */
+  --color-accent: #b24c32;
+  --color-accent-dark: #843723;
+  --color-ink: #252622;
+  --color-muted: #77776f;
+  --color-paper: #f8f7f2;
+  --color-surface: #fffefa;
+  --color-line: #e5e2d9;
+  --color-code: #f0eee8;
+  --font-body: "Lato", "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Figtree", "Helvetica Neue", Arial, sans-serif;
+  --content-width: 1200px;
+  --reading-width: 760px;
+  --radius-card: 1.15rem;
+  --primary-color: var(--color-accent);
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--color-paper);
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: "Lato", Arial, sans-serif;
-  font-size: 150%;
-  background: #f5f7fa;
-  color: #212121;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 main {
@@ -17,49 +47,34 @@ main {
 h1,
 h2,
 h3 {
-  font-family: "Figtree", "Lato", Arial, sans-serif;
+  font-family: var(--font-display);
   font-optical-sizing: auto;
   font-style: normal;
 }
 
-h1,
-h2 {
-  font-weight: 900;
-  text-transform: uppercase;
-}
-
-h3 {
-  font-weight: 700;
-}
-
 .container {
+  width: min(100% - 48px, var(--content-width));
   margin: 0 auto;
-  max-width: 1400px;
-  padding: 0 20px;
 }
 
 .centered-images img {
-  margin: 0 auto;
   display: block;
+  margin: 0 auto;
 }
 
 .centered-images .photo-attribution {
   text-align: center;
-  font-size: 1rem;
-}
-
-:root {
-  --primary-color: #720512;
+  font-size: 0.875rem;
 }
 
 .inverted {
-  background: var(--primary-color);
-  color: white;
+  background: var(--color-ink);
+  color: var(--color-surface);
 }
 
 .fade-in {
   opacity: 0;
-  transform: translateY(-100px);
+  transform: translateY(-24px);
   animation: fadeInEffect 0.5s ease-in 0.1s forwards;
 }
 
@@ -67,5 +82,11 @@ h3 {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (max-width: 680px) {
+  .container {
+    width: min(100% - 32px, var(--content-width));
   }
 }

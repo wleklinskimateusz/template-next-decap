@@ -35,7 +35,7 @@ export default async function Home() {
         </div>
       </section>
       <section className="container">
-        <h2>Aktualności</h2>
+        <h2>Artykuły</h2>
         <ArticlesItems articlesData={articlesData.slice(0, 3)} />
       </section>
     </>

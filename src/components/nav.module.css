@@ -3,17 +3,22 @@
   top: 0;
   width: 100%;
   z-index: 10;
+  border-bottom: 1px solid rgb(255 255 255 / 10%);
+  background: var(--color-ink);
 }
 
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0;
+  min-height: 76px;
+  padding: 0;
 }
 
 .navLinks {
   display: flex;
+  align-items: center;
+  gap: 0.25rem;
 }
 
 .headerButton,
@@ -23,23 +28,64 @@
 .headerButton:visited {
   cursor: pointer;
   font-weight: 700;
-  color: white;
+  color: var(--color-surface);
   text-decoration: none;
-  text-transform: uppercase;
-  padding: 20px 20px;
+  text-transform: none;
+  padding: 14px 16px;
   display: block;
+  font-size: 0.9rem;
 }
 
 .navLinks .headerButton:hover {
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 6px;
+  color: #efb29d;
+  text-decoration: none;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  font-size: 20px;
-  line-height: 20px;
+  gap: 0.65rem;
+  font-size: 1.1rem;
+  line-height: 1;
   font-weight: 900;
+  letter-spacing: -0.03em;
+}
+
+.logo::before {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: white;
+  content: "e";
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-style: italic;
+}
+
+@media (max-width: 540px) {
+  .nav {
+    min-height: 68px;
+  }
+
+  .headerButton,
+  .headerButton:hover,
+  .headerButton:focus,
+  .headerButton:active,
+  .headerButton:visited {
+    padding: 12px 9px;
+    font-size: 0.82rem;
+  }
+
+  .logo {
+    gap: 0.45rem;
+    font-size: 0.95rem;
+  }
+
+  .logo::before {
+    width: 30px;
+    height: 30px;
+  }
 }

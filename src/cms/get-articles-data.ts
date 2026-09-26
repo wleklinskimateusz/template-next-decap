@@ -9,6 +9,7 @@ const articleSchema = z.object({
     title: z.string(),
     description: z.string(),
     date: z.date(),
+    category: z.string().optional(),
     image: z.string().optional(),
     seoTitle: z.string().optional(),
     seoDescription: z.string().optional(),
@@ -37,10 +38,10 @@ export const getArticleData = async () => {
   const files = await fs.readdir("src/content/articles");
   const newsfeedData = files.map(async (file) => {
     const path = file.replace(".md", "");
-    const { layout, title, description, date, image } =
+    const { layout, title, description, date, image, category } =
       await getArticleFileMetadata(path);
 
-    return { path, layout, title, description, date, image };
+    return { path, layout, title, description, date, image, category };
   });
   return Promise.all(newsfeedData);
 };
