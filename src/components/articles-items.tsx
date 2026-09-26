@@ -1,14 +1,14 @@
-import styles from "./newsfeed-items.module.css";
+import styles from "./articles-items.module.css";
 import { PostCard, PostCardProps } from "./post-card";
 
-export const NewsfeedItems = ({
-  newsfeedData,
+export const ArticlesItems = ({
+  articlesData,
 }: {
-  newsfeedData: PostCardProps[];
+  articlesData: PostCardProps[];
 }) => {
   return (
     <div className={styles.newsfeedItems}>
-      {newsfeedData.map((item) => (
+      {articlesData.map((item) => (
         <PostCard key={item.path} {...item} />
       ))}
     </div>

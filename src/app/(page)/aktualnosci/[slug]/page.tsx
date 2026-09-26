@@ -1,7 +1,7 @@
 import {
-  getNewsfeedData,
-  getNewsfeedFileMetadata,
-} from "@/cms/get-newsfeed-data";
+  getArticleData,
+  getArticleFileMetadata,
+} from "@/cms/get-articles-data";
 import path from "path";
 import fs from "fs/promises"
 import matter from "gray-matter";
@@ -14,7 +14,7 @@ export async function generateMetadata({
 }) {
   const { slug } = await params;
   const { title, description, seoTitle, seoDescription, seoTags } =
-    await getNewsfeedFileMetadata(slug);
+    await getArticleFileMetadata(slug);
 
   return {
     title: `${seoTitle || title} - e-zin`,
@@ -32,13 +32,13 @@ export default async function Page({
   const { slug } = await params;
 
   const safeSlug = path.basename(slug);
-  const filePath = path.join(process.cwd(), "src/content/newsfeed", `${safeSlug}.md`);
+  const filePath = path.join(process.cwd(), "src/content/articles", `${safeSlug}.md`);
 
   let fileContent: string;
   try {
     fileContent = await fs.readFile(filePath, "utf8");
   } catch {
-    throw new Error(`Newsfeed post not found: ${slug}`);
+    throw new Error(`Article not found: ${slug}`);
   }
 
 
@@ -47,6 +47,6 @@ export default async function Page({
 }
 
 export async function generateStaticParams() {
-  const newsfeedData = await getNewsfeedData();
-  return newsfeedData.map(({ path }) => ({ slug: path }));
+  const articleData = await getArticleData();
+  return articleData.map(({ path }) => ({ slug: path }));
 }

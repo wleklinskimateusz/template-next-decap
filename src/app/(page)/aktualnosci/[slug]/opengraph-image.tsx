@@ -1,7 +1,7 @@
 import {
-  getNewsfeedData,
-  getNewsfeedFileMetadata,
-} from "@/cms/get-newsfeed-data";
+  getArticleData,
+  getArticleFileMetadata,
+} from "@/cms/get-articles-data";
 import { ImageResponse } from "next/og";
 
 export const size = {
@@ -17,7 +17,7 @@ export default async function OpengraphImage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const { title, date, image } = await getNewsfeedFileMetadata(slug);
+  const { title, date, image } = await getArticleFileMetadata(slug);
 
   const avatarElement = (
     <img
@@ -152,6 +152,6 @@ export default async function OpengraphImage({
 }
 
 export async function generateStaticParams() {
-  const newsfeedData = await getNewsfeedData();
-  return newsfeedData.map(({ path }) => ({ slug: path }));
+  const articleData = await getArticleData();
+  return articleData.map(({ path }) => ({ slug: path }));
 }
