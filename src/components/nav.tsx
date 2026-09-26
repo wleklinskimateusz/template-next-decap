@@ -13,7 +13,7 @@ export const Nav = () => (
         <Link className={styles.headerButton} href="/">
           Strona główna
         </Link>
-        <Link className={styles.headerButton} href="/aktualnosci">
+        <Link className={styles.headerButton} href="/articles">
           Artykuły
         </Link>
       </div>

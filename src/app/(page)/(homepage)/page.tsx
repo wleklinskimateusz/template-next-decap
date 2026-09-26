@@ -25,7 +25,7 @@ export default async function Home() {
             <p className={styles.eyebrow}><span /> E-zin · magazyn idei</p>
             <h1 className={styles.heroTitle}>{heroTitle}</h1>
             <p className={styles.heroSubtitle}>{heroSubtitle}</p>
-            <Link className={styles.heroLink} href="/aktualnosci">
+            <Link className={styles.heroLink} href="/articles">
               Odkryj artykuły <span aria-hidden="true">↗</span>
             </Link>
           </div>
@@ -49,7 +49,7 @@ export default async function Home() {
             <p className={styles.latestEyebrow}>Na dobry początek</p>
             <h2>Artykuły</h2>
           </div>
-          <Link className={styles.allArticles} href="/aktualnosci">
+          <Link className={styles.allArticles} href="/articles">
             Wszystkie teksty <span aria-hidden="true">→</span>
           </Link>
         </div>

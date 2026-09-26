@@ -49,7 +49,7 @@ export default async function Page({
   const { content } = matter(fileContent);
   return (
     <article className={styles.page}>
-      <Link className={styles.backLink} href="/aktualnosci">
+      <Link className={styles.backLink} href="/articles">
         <span aria-hidden="true">←</span> Wszystkie artykuły
       </Link>
       <header className={styles.articleHeader}>

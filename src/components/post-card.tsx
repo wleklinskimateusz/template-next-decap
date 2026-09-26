@@ -21,7 +21,7 @@ export const PostCard = ({
 }: PostCardProps) => {
   return (
     <div className={styles.postCard}>
-      <Link className={styles.cardLink} href={`/aktualnosci/${path}`}>
+      <Link className={styles.cardLink} href={`/articles/${path}`}>
         {image && (
           <Image
             src={image}

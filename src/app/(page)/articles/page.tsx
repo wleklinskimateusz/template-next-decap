@@ -4,11 +4,11 @@ import styles from "./page.module.css";
 
 
 export const metadata = {
-  title: "Aktualności",
+  title: "Articles",
   description: "",
 };
 
-export default async function Aktualnosci() {
+export default async function Articles() {
   const articlesData = await getArticleData();
 
   return (
