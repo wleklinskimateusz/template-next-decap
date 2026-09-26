@@ -73,6 +73,12 @@ collections:
         file: "src/content/homepage.json"
         format: "json"
         fields:
+          - label: "Hero Tytuł"
+            name: "heroTitle"
+            widget: "string"
+          - label: "Hero Opis"
+            name: "heroSubtitle"
+            widget: "text"
           - label: "Seo Title"
             name: "seoTitle"
             widget: "string"
@@ -82,6 +88,4 @@ collections:
           - label: "Seo Tags"
             name: "seoTags"
             widget: "list"
-          - label: "Hero Tytuł"
-            name: "heroTitle"
-            widget: "string"
+            required: true
