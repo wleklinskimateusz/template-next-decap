@@ -1,10 +1,12 @@
 {
-    "eyebrow": "E-zin · magazyn idei",
-    "title": "Czytaj szerzej.",
-    "description": "Jakiś inny podtytuł, który ktoś będzie musiał wymyślic",
-    "sectionLabel": "Najnowsze artykuły",
-    "articleCountLabel": "tekstów",
-    "seoTitle": "Artykuły | E-zin",
-    "seoDescription": "Mądry podtytuł, ale dla SEO, który ktoś będzie musiał wymyślic",
-    "seoTags": ["articles"]
+  "eyebrow": "E-zin · magazyn idei",
+  "title": "Czytaj szerzej.",
+  "description": "Jakiś inny podtytuł, który ktoś będzie musiał wymyślic",
+  "sectionLabel": "Najnowsze artykuły",
+  "articleCountLabel": "tekstów",
+  "seoTitle": "Artykuły | E-zin",
+  "seoDescription": "Mądry podtytuł, ale dla SEO, który ktoś będzie musiał wymyślic. Ktoś ma jakieś pomysły?",
+  "seoTags": [
+    "articles"
+  ]
 }
