@@ -1,6 +1,7 @@
 import {
   getArticleData,
   getArticleFileMetadata,
+  getArticleImageSrc,
 } from "@/cms/get-articles-data";
 import { ImageResponse } from "next/og";
 
@@ -98,7 +99,7 @@ export default async function OpengraphImage({
         }}
       >
         <img
-          src={`http://localhost:3000${image}`}
+          src={`http://localhost:3000${getArticleImageSrc(image)}`}
           alt={title}
           width={1200}
           height={630}

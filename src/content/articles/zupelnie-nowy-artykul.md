@@ -7,7 +7,7 @@ seoTitle: ''
 seoDescription: ''
 seoTags: []
 layout: blog
-image: /template-next-decap/images/uploads/gilotyna.png
+image: /template-next-decap/images/uploads/gilotyna.jpg
 ---
 
 Kolejne instytucje kultury zrywają **współpracę** z _Izra\*lem_

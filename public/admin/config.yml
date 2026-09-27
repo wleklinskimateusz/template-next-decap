@@ -11,7 +11,7 @@ backend:
     openAuthoring: '{{message}}'
 publish_mode: editorial_workflow
 media_folder: "public/images/uploads"
-# only hardcoded because it isn't hosted on root
+# Keep the deployed GitHub Pages path in Decap's saved image URLs.
 public_folder: "/template-next-decap/images/uploads"
 # when using the default proxy server port
 slug:

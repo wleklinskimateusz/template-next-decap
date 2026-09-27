@@ -1,13 +1,38 @@
 import {
   getArticleData,
   getArticleFileMetadata,
+  getArticleImageSrc,
 } from "@/cms/get-articles-data";
 import path from "path";
 import fs from "fs/promises"
 import matter from "gray-matter";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import type { ComponentProps } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./page.module.css";
+
+const mdxComponents = {
+  img: ({ src, alt, width, height, ...props }: ComponentProps<"img">) => {
+    if (typeof src !== "string") {
+      return null;
+    }
+
+    const imageWidth = Number(width) || 1200;
+    const imageHeight = Number(height) || 675;
+
+    return (
+      <Image
+        {...props}
+        src={getArticleImageSrc(src)}
+        alt={alt ?? ""}
+        width={imageWidth}
+        height={imageHeight}
+        style={{ ...props.style, width: "100%", height: "auto" }}
+      />
+    );
+  },
+};
 
 export async function generateMetadata({
   params,
@@ -32,7 +57,7 @@ export default async function Page({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const { description, date, category } =
+  const { title, description, date, category, image } =
     await getArticleFileMetadata(slug);
 
   const safeSlug = path.basename(slug);
@@ -53,7 +78,19 @@ export default async function Page({
         <span aria-hidden="true">←</span> Wszystkie artykuły
       </Link>
       <header className={styles.articleHeader}>
+        {image && (
+          <Image
+            className={styles.coverImage}
+            src={getArticleImageSrc(image)}
+            alt={title}
+            width={1200}
+            height={675}
+            sizes="(max-width: 680px) calc(100vw - 32px), 800px"
+            priority
+          />
+        )}
         <p className={styles.eyebrow}>{category || "Czytaj szerzej"}</p>
+        <h1 className={styles.title}>{title}</h1>
         <p className={styles.description}>{description}</p>
         <div className={styles.meta}>
           <time dateTime={date.toISOString()}>
@@ -66,7 +103,7 @@ export default async function Page({
         </div>
       </header>
       <div className={styles.content}>
-        <MDXRemote source={content} />
+        <MDXRemote source={content} components={mdxComponents} />
       </div>
     </article>
   );

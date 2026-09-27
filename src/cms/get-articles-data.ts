@@ -17,6 +17,21 @@ const articleSchema = z.object({
   }),
 });
 
+export const getArticleImageSrc = (image: string) => {
+  if (/^https?:\/\//i.test(image)) {
+    return image;
+  }
+
+  const basePath = (process.env.PAGES_BASE_PATH ?? "").replace(/\/$/, "");
+  const uploadsPathIndex = image.indexOf("/images/uploads/");
+  const normalizedPath =
+    uploadsPathIndex >= 0
+      ? image.slice(uploadsPathIndex)
+      : `/${image.replace(/^\/+/, "")}`;
+
+  return `${basePath}${normalizedPath}`;
+};
+
 export const getArticleFileMetadata = async (file: string) => {
   const filePath = path.join(
     process.cwd(),

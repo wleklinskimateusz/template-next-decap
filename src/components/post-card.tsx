@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { getArticleImageSrc } from "@/cms/get-articles-data";
 import styles from "./post-card.module.css";
 
 export type PostCardProps = {
@@ -24,7 +25,7 @@ export const PostCard = ({
       <Link className={styles.cardLink} href={`/articles/${path}`}>
         {image && (
           <Image
-            src={image}
+            src={getArticleImageSrc(image)}
             alt={title}
             width={400}
             height={225}

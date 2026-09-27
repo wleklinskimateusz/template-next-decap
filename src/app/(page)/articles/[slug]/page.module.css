@@ -26,6 +26,16 @@
   border-bottom: 1px solid var(--color-line);
 }
 
+.coverImage {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 520px;
+  margin-bottom: clamp(2rem, 5vw, 3.5rem);
+  border-radius: var(--radius-card);
+  object-fit: cover;
+}
+
 .eyebrow {
   margin: 0 0 1rem;
   color: var(--color-accent);
@@ -34,6 +44,16 @@
   font-weight: 800;
   letter-spacing: 0.15em;
   text-transform: uppercase;
+}
+
+.title {
+  margin: 0 0 1rem;
+  color: var(--color-ink);
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 7vw, 5.6rem);
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 1.12;
 }
 
 .description {
