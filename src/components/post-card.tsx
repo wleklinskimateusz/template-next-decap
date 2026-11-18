@@ -34,7 +34,7 @@ export const PostCard = ({
         )}
         {!image && (
           <div className={styles.imagePlaceholder} aria-hidden="true">
-            <span>{category || "E-zin"}</span>
+            <span>{category || "Teksty Oporu"}</span>
             <i />
           </div>
         )}

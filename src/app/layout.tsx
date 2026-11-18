@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "E-zin",
-  description: "Ezin",
+  title: "Teksty Oporu",
+  description: "teksty oporu",
   // temporary, to avoid indexing
   robots: {
     index: false,

@@ -6,7 +6,7 @@ export const Nav = () => (
     <nav className={`${styles.nav} container`}>
       <Link className={styles.headerButton} href="/">
         <div className={styles.logo}>
-          <div>E-zin</div>
+          <div>Teksty Oporu</div>
         </div>
       </Link>
       <div className={styles.navLinks}>

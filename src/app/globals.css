@@ -1,13 +1,13 @@
 :root {
   /* Change these tokens to quickly re-theme the site. */
-  --color-accent: #b24c32;
-  --color-accent-dark: #843723;
-  --color-ink: #252622;
-  --color-muted: #77776f;
-  --color-paper: #f8f7f2;
-  --color-surface: #fffefa;
-  --color-line: #e5e2d9;
-  --color-code: #f0eee8;
+  --color-accent: #cc561b;
+  --color-accent-dark: #7b2e21;
+  --color-ink: #111111;
+  --color-muted: #5a514f;
+  --color-paper: #eeeae2;
+  --color-surface: #f8f3ee;
+  --color-line: #d9c8bd;
+  --color-code: #f4efe8;
   --font-body: "Lato", "Helvetica Neue", Arial, sans-serif;
   --font-display: "Figtree", "Helvetica Neue", Arial, sans-serif;
   --content-width: 1200px;
@@ -68,7 +68,7 @@ h3 {
 }
 
 .inverted {
-  background: var(--color-ink);
+  background: var(--color-accent-dark);
   color: var(--color-surface);
 }
 

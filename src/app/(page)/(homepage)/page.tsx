@@ -22,7 +22,7 @@ export default async function Home() {
       <section className={styles.hero}>
         <div className={`${styles.heroInner} container`}>
           <div className={styles.heroCopy}>
-            <p className={styles.eyebrow}><span /> E-zin · magazyn idei</p>
+            <p className={styles.eyebrow}><span /> Czytaj · Myśl · Sprzeciwiaj się</p>
             <h1 className={styles.heroTitle}>{heroTitle}</h1>
             <p className={styles.heroSubtitle}>{heroSubtitle}</p>
             <Link className={styles.heroLink} href="/articles">
@@ -32,14 +32,12 @@ export default async function Home() {
           <div className={styles.heroVisual}>
             <Image
               className={styles.heroImage}
-              src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1200&q=85"
-              alt="Przytulna biblioteka pełna książek"
+              src="/logo.jpg"
+              alt="Logo Teksty Oporu"
               fill
               priority
               sizes="(max-width: 560px) 66vw, (max-width: 760px) 40vw, 410px"
             />
-            <div className={styles.imageShade} aria-hidden="true" />
-            <p className={styles.imageCaption}>MIEJSCE NA NOWE PERSPEKTYWY</p>
           </div>
         </div>
       </section>

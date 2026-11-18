@@ -1,5 +1,4 @@
 import { redirect } from "next/navigation";
-import Script from "next/script";
 
 
 export const metadata = {

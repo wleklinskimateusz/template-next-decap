@@ -44,7 +44,7 @@ export async function generateMetadata({
     await getArticleFileMetadata(slug);
 
   return {
-    title: `${seoTitle || title} - e-zin`,
+    title: `${seoTitle || title} - teksty oporu`,
     description: seoDescription || description,
     keywords: seoTags || [],
     // metadataBase: new URL(""),
