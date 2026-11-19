@@ -1,0 +1,93 @@
+.page {
+  width: min(100% - 48px, var(--content-width));
+  margin: 0 auto;
+  padding: clamp(3.5rem, 8vw, 7rem) 0 clamp(4rem, 8vw, 7rem);
+}
+
+.intro {
+  padding-bottom: clamp(2rem, 5vw, 3.5rem);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.eyebrow {
+  margin: 0 0 1rem;
+  color: var(--color-accent);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.title {
+  max-width: 900px;
+  margin: 0;
+  color: var(--color-ink);
+  font-family: var(--font-display);
+  font-size: clamp(2.75rem, 8vw, 6rem);
+  font-weight: 700;
+  letter-spacing: -0.075em;
+  line-height: 0.98;
+}
+
+.updated {
+  margin: 1.5rem 0 0;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+.content {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: clamp(2rem, 5vw, 3rem) 0;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.section h2 {
+  margin: 0 0 1rem;
+  color: var(--color-ink);
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  letter-spacing: -0.045em;
+  line-height: 1.2;
+}
+
+.section p {
+  margin: 0 0 1rem;
+  color: var(--color-muted);
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.section p:last-child {
+  margin-bottom: 0;
+}
+
+.section a {
+  color: var(--color-accent-dark);
+  text-underline-offset: 0.2em;
+}
+
+.section a:focus-visible {
+  border-radius: 2px;
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+.section code {
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+  background: var(--color-surface);
+  color: var(--color-ink);
+  font-size: 0.9em;
+}
+
+@media (max-width: 680px) {
+  .page {
+    width: min(100% - 32px, var(--content-width));
+    padding-top: 3.25rem;
+  }
+
+}

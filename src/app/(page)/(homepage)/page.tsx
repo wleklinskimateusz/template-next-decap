@@ -6,7 +6,19 @@ import Image from "next/image";
 import styles from "./page.module.css";
 
 
-const { heroTitle, heroSubtitle, seoTitle, seoDescription, seoTags } = homepage;
+const {
+  heroTitle,
+  heroSubtitle,
+  aboutEyebrow,
+  aboutTitle,
+  aboutDescription,
+  aboutPromptLabel,
+  aboutPromptText,
+  aboutLinkText,
+  seoTitle,
+  seoDescription,
+  seoTags,
+} = homepage;
 
 export const metadata = {
   title: seoTitle,
@@ -52,6 +64,24 @@ export default async function Home() {
           </Link>
         </div>
         <ArticlesItems articlesData={articlesData.slice(0, 3)} />
+      </section>
+      <section className={styles.about} aria-labelledby="about-heading">
+        <div className={`container ${styles.aboutInner}`}>
+          <div className={styles.aboutHeader}>
+            <p className={styles.aboutEyebrow}>{aboutEyebrow}</p>
+            <h2 id="about-heading">{aboutTitle}</h2>
+          </div>
+          <div className={styles.aboutContent}>
+            <p className={styles.aboutCopy}>{aboutDescription}</p>
+            <div className={styles.aboutPrompt}>
+              <span className={styles.aboutPromptLabel}>{aboutPromptLabel}</span>
+              <p>{aboutPromptText}</p>
+              <Link className={styles.aboutLink} href="/about">
+                {aboutLinkText} <span aria-hidden="true">↗</span>
+              </Link>
+            </div>
+          </div>
+        </div>
       </section>
     </>
   );

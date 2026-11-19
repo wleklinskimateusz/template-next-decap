@@ -16,6 +16,9 @@ export const Nav = () => (
         <Link className={styles.headerButton} href="/articles">
           Artykuły
         </Link>
+        <Link className={styles.headerButton} href="/about">
+          O nas
+        </Link>
       </div>
     </nav>
   </header>

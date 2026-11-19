@@ -159,6 +159,135 @@
   color: var(--color-accent);
 }
 
+.about {
+  padding: 0 0 clamp(4rem, 8vw, 7rem);
+}
+
+.aboutInner {
+  padding-top: clamp(3.5rem, 7vw, 6rem);
+  border-top: 1px solid var(--color-line);
+}
+
+.aboutHeader {
+  margin-bottom: 1.75rem;
+}
+
+.aboutEyebrow {
+  margin: 0 0 0.5rem;
+  color: var(--color-accent);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.aboutHeader h2 {
+  margin: 0;
+  color: var(--color-ink);
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: -0.06em;
+  line-height: 1;
+  text-transform: none;
+}
+
+.aboutContent {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+  align-items: stretch;
+  gap: clamp(2rem, 6vw, 5rem);
+}
+
+.aboutCopy {
+  max-width: 38rem;
+  margin: 0;
+  align-self: center;
+  color: var(--color-muted);
+  font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+  line-height: 1.8;
+}
+
+.aboutPrompt {
+  position: relative;
+  display: flex;
+  min-height: 250px;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: clamp(1.75rem, 4vw, 3rem);
+  border-radius: var(--radius-card);
+  background: var(--color-accent-dark);
+  color: var(--color-surface);
+}
+
+.aboutPrompt::after {
+  position: absolute;
+  top: -5rem;
+  right: -4rem;
+  width: 15rem;
+  aspect-ratio: 1;
+  border: 1px solid rgb(248 243 238 / 17%);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 1.25rem rgb(248 243 238 / 5%),
+    0 0 0 2.5rem rgb(248 243 238 / 4%);
+  content: "";
+  pointer-events: none;
+}
+
+.aboutPromptLabel {
+  margin-bottom: 1rem;
+  color: #f0b09a;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.aboutPrompt p {
+  position: relative;
+  z-index: 1;
+  max-width: 12ch;
+  margin: 0 0 1.5rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.2vw, 2.8rem);
+  font-weight: 700;
+  letter-spacing: -0.06em;
+  line-height: 1.05;
+}
+
+.aboutLink {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 1rem;
+  border: 1px solid rgb(248 243 238 / 45%);
+  border-radius: 999px;
+  color: inherit;
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-decoration: none;
+  transition:
+    background 160ms ease,
+    border-color 160ms ease,
+    transform 160ms ease;
+}
+
+.aboutLink:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-surface);
+  background: rgb(248 243 238 / 12%);
+}
+
+.aboutLink:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
 @media (max-width: 760px) {
   .heroInner {
     min-height: auto;
@@ -168,6 +297,11 @@
 
   .heroVisual {
     width: min(100%, 290px);
+  }
+
+  .aboutContent {
+    grid-template-columns: minmax(0, 1fr) minmax(270px, 1fr);
+    gap: 1.5rem;
   }
 }
 
@@ -192,6 +326,14 @@
     margin: -1rem 0 0 auto;
   }
 
+  .aboutContent {
+    grid-template-columns: 1fr;
+  }
+
+  .aboutPrompt {
+    min-height: 220px;
+  }
+
   .latestHeading {
     align-items: start;
   }
@@ -205,7 +347,8 @@
 
 @media (prefers-reduced-motion: reduce) {
   .heroLink,
-  .heroImage {
+  .heroImage,
+  .aboutLink {
     transition: none;
   }
 
@@ -214,6 +357,10 @@
   }
 
   .heroVisual:hover .heroImage {
+    transform: none;
+  }
+
+  .aboutLink:hover {
     transform: none;
   }
 }
