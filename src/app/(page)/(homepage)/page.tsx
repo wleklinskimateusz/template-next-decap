@@ -32,7 +32,7 @@ export default async function Home() {
           <div className={styles.heroVisual}>
             <Image
               className={styles.heroImage}
-              src="/logo.jpg"
+              src="/snakes.jpg"
               alt="Logo Teksty Oporu"
               fill
               priority
