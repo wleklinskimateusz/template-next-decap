@@ -1,0 +1,37 @@
+.page {
+  width: min(100% - 48px, var(--content-width));
+  margin: 0 auto;
+  padding: clamp(3rem, 7vw, 6rem) 0;
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  color: var(--color-accent);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0;
+  color: var(--color-ink);
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 8vw, 6rem);
+  letter-spacing: -0.075em;
+  line-height: 0.95;
+}
+
+.intro {
+  max-width: 42rem;
+  margin: 1.25rem 0 2.5rem;
+  color: var(--color-muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 680px) {
+  .page {
+    width: min(100% - 32px, var(--content-width));
+  }
+}

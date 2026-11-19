@@ -1,0 +1,285 @@
+.editor {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.heading {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.description {
+  max-width: 42rem;
+  margin: 0;
+  color: var(--color-muted);
+  line-height: 1.6;
+}
+
+.reset,
+.imageOption {
+  min-height: 40px;
+  flex: 0 0 auto;
+  padding: 0.55rem 0.85rem;
+  border: 1px solid var(--color-line);
+  border-radius: 999px;
+  background: var(--color-surface);
+  color: var(--color-ink);
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.reset:hover,
+.imageOption:hover,
+.selectedOption {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.reset:focus-visible,
+.imageOption:focus-visible,
+.swatch:focus-visible,
+.customColor input:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.roles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.role {
+  display: grid;
+  min-width: 0;
+  gap: 0.8rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--color-line);
+  border-radius: 0.9rem;
+  background: var(--color-surface);
+}
+
+.roleHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.backgroundOptions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.35rem;
+}
+
+.roleName {
+  color: var(--color-ink);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.picker {
+  display: flex;
+  min-width: 0;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.swatch,
+.preview {
+  width: 1.55rem;
+  height: 1.55rem;
+  flex: 0 0 auto;
+  border: 1px solid rgb(0 0 0 / 18%);
+  border-radius: 50%;
+}
+
+.swatch {
+  padding: 0;
+  cursor: pointer;
+}
+
+.selectedSwatch {
+  outline: 2px solid var(--color-ink);
+  outline-offset: 2px;
+}
+
+.customColor {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--color-muted);
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+.customColor input {
+  width: 2.2rem;
+  height: 2rem;
+  padding: 2px;
+  border: 1px solid var(--color-line);
+  border-radius: 0.4rem;
+  background: var(--color-paper);
+  cursor: pointer;
+}
+
+.currentValue {
+  color: var(--color-muted);
+  font-size: 0.75rem;
+}
+
+.error {
+  margin: 0;
+  color: #b42318;
+  font-size: 0.9rem;
+}
+
+.export {
+  display: grid;
+  gap: 0.8rem;
+  padding: 1.1rem;
+  border: 1px solid var(--color-line);
+  border-radius: 0.9rem;
+  background: var(--color-surface);
+}
+
+.exportHeader {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.exportTitle {
+  margin: 0;
+  color: var(--color-ink);
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+}
+
+.exportDescription,
+.exportStatus {
+  margin: 0.35rem 0 0;
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.exportDescription code {
+  color: var(--color-ink);
+}
+
+.exportCode {
+  width: 100%;
+  min-height: 5rem;
+  padding: 0.85rem;
+  resize: vertical;
+  border: 1px solid var(--color-line);
+  border-radius: 0.65rem;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+.exportCode:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.exportStatus {
+  margin-top: 0;
+}
+
+.reset:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.compact {
+  gap: 1rem;
+}
+
+.compact .heading {
+  flex-direction: column;
+}
+
+.compact .roles {
+  grid-template-columns: 1fr;
+  max-height: min(58vh, 500px);
+  overflow: auto;
+  padding: 1px 0.25rem 1px 1px;
+}
+
+.compact .role {
+  gap: 0.6rem;
+  padding: 0.7rem 0.75rem;
+}
+
+.compact .roleName {
+  font-size: 0.82rem;
+}
+
+.compact .imageOption {
+  min-height: 34px;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.72rem;
+}
+
+.compact .backgroundOptions {
+  gap: 0.25rem;
+}
+
+.compact .picker {
+  gap: 0.5rem;
+}
+
+.compact .swatches {
+  gap: 0.3rem;
+}
+
+.compact .swatch,
+.compact .preview {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
+.compact .customColor {
+  font-size: 0.7rem;
+}
+
+.compact .customColor input {
+  width: 1.9rem;
+  height: 1.8rem;
+}
+
+.compact .currentValue {
+  font-size: 0.7rem;
+}
+
+@media (max-width: 680px) {
+  .heading {
+    flex-direction: column;
+  }
+
+  .roles {
+    grid-template-columns: 1fr;
+  }
+
+  .role {
+    padding: 0.75rem;
+  }
+}

@@ -1,21 +1,34 @@
 :root {
+  --palette-electric-blue: #2b42f2;
+  --palette-ochre: #947b00;
+  --palette-burnt-orange: #cc561b;
+  --palette-sky-blue: #95cde8;
+  --palette-warm-white: #eeeae2;
+  --palette-rust: #7b2e21;
+  --palette-chartreuse: #d1d066;
+  --palette-periwinkle: #b9c7f8;
+  --palette-golden-ochre: #a87b00;
+  --palette-sienna: #7f4a16;
+
   /* Change these tokens to quickly re-theme the site. */
-  --color-accent: #cc561b;
-  --color-accent-dark: #7b2e21;
-  --color-gold: #947b00;
-  --color-blue: #2b42f2;
+  --color-accent: var(--palette-burnt-orange);
+  --color-accent-dark: var(--palette-rust);
+  --color-gold: var(--palette-ochre);
+  --color-blue: var(--palette-electric-blue);
+  --primary-color: var(--color-accent);
   --color-ink: #111111;
   --color-muted: #5a514f;
-  --color-paper: #eeeae2;
+  --color-paper: var(--palette-warm-white);
   --color-surface: #f8f3ee;
   --color-line: #d9c8bd;
   --color-code: #f4efe8;
+  --color-hero-background: transparent;
+  --color-hero-text: var(--palette-rust);
   --font-body: "Lato", "Helvetica Neue", Arial, sans-serif;
   --font-display: "Figtree", "Helvetica Neue", Arial, sans-serif;
   --content-width: 1200px;
   --reading-width: 760px;
   --radius-card: 1.15rem;
-  --primary-color: var(--color-accent);
   color-scheme: light;
 }
 
