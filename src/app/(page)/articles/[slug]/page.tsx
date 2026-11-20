@@ -10,7 +10,10 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import type { ComponentProps } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { notFound } from "next/navigation";
 import styles from "./page.module.css";
+
+const EMPTY_ARTICLES_SLUG = "__no_articles__";
 
 const mdxComponents = {
   img: ({ src, alt, width, height, ...props }: ComponentProps<"img">) => {
@@ -40,6 +43,9 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
+  if (slug === EMPTY_ARTICLES_SLUG) {
+    notFound();
+  }
   const { title, description, seoTitle, seoDescription, seoTags } =
     await getArticleFileMetadata(slug);
 
@@ -57,6 +63,9 @@ export default async function Page({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
+  if (slug === EMPTY_ARTICLES_SLUG) {
+    notFound();
+  }
   const { title, description, date, category, image } =
     await getArticleFileMetadata(slug);
 
@@ -111,5 +120,7 @@ export default async function Page({
 
 export async function generateStaticParams() {
   const articleData = await getArticleData();
-  return articleData.map(({ path }) => ({ slug: path }));
+  return articleData.length
+    ? articleData.map(({ path }) => ({ slug: path }))
+    : [{ slug: EMPTY_ARTICLES_SLUG }];
 }

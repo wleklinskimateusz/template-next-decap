@@ -12,12 +12,28 @@ export const size = {
 
 export const contentType = "image/png";
 
+const EMPTY_ARTICLES_SLUG = "__no_articles__";
+
 export default async function OpengraphImage({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
+  if (slug === EMPTY_ARTICLES_SLUG) {
+    return new ImageResponse(
+      (
+        <div
+          style={{
+            width: "100%",
+            height: "100%",
+            background: "#f3ec78",
+          }}
+        />
+      ),
+      size,
+    );
+  }
   const { title, date, image } = await getArticleFileMetadata(slug);
 
   const avatarElement = (
@@ -154,5 +170,7 @@ export default async function OpengraphImage({
 
 export async function generateStaticParams() {
   const articleData = await getArticleData();
-  return articleData.map(({ path }) => ({ slug: path }));
+  return articleData.length
+    ? articleData.map(({ path }) => ({ slug: path }))
+    : [{ slug: EMPTY_ARTICLES_SLUG }];
 }

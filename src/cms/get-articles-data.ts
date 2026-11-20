@@ -50,13 +50,32 @@ export const getArticleFileMetadata = async (file: string) => {
   }
 };
 export const getArticleData = async () => {
-  const files = await fs.readdir("src/content/articles");
-  const newsfeedData = files.map(async (file) => {
-    const path = file.replace(".md", "");
-    const { layout, title, description, date, image, category } =
-      await getArticleFileMetadata(path);
+  let files: string[];
+  try {
+    files = await fs.readdir("src/content/articles");
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code === "ENOENT") {
+      return [];
+    }
+    throw error;
+  }
 
-    return { path, layout, title, description, date, image, category };
-  });
+  const newsfeedData = files
+    .filter((file) => file.endsWith(".md"))
+    .map(async (file) => {
+      const articlePath = file.replace(/\.md$/, "");
+      const { layout, title, description, date, image, category } =
+        await getArticleFileMetadata(articlePath);
+
+      return {
+        path: articlePath,
+        layout,
+        title,
+        description,
+        date,
+        image,
+        category,
+      };
+    });
   return Promise.all(newsfeedData);
 };
