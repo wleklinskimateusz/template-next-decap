@@ -5,11 +5,6 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Teksty Oporu",
   description: "teksty oporu",
-  // temporary, to avoid indexing
-  robots: {
-    index: false,
-    follow: false,
-  },
 };
 
 export default function RootLayout({
