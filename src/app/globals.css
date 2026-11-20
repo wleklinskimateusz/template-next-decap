@@ -12,17 +12,17 @@
 
   /* Change these tokens to quickly re-theme the site. */
   --color-accent: var(--palette-burnt-orange);
-  --color-accent-dark: var(--palette-rust);
+  --color-accent-dark: #796085;
   --color-gold: var(--palette-ochre);
   --color-blue: var(--palette-electric-blue);
   --primary-color: var(--color-accent);
   --color-ink: #111111;
   --color-muted: #5a514f;
   --color-paper: var(--palette-warm-white);
-  --color-surface: #f8f3ee;
+  --color-surface: #fefdf6;
   --color-line: #d9c8bd;
   --color-code: #f4efe8;
-  --color-hero-background: transparent;
+  --color-hero-background: #7575ff;
   --color-hero-text: var(--palette-rust);
   --font-body: "Lato", "Helvetica Neue", Arial, sans-serif;
   --font-display: "Figtree", "Helvetica Neue", Arial, sans-serif;
