@@ -4,8 +4,8 @@ description: '-'
 language: ar
 translations:
   - language: pl
-    title: W moim kraju
-    description: '-'
+    title: W moim kraju - Rosol i Moawiya
+    description: 'Ta piosenka została napisana dla naszego przyjaciela, który zginął w obozie Nur Szams. Ten utwór opowiada o morzu, od którego dzieli mnie 10 minut drogi od domu, a którego nigdy nie widziałem, chociaż mam już 20 lat.'
     body: |-
       # W moim kraju
 
@@ -121,6 +121,9 @@ translations:
 
 
       \*\*\*\* Wers odwołuje się do postaci Goga i Magoga pojawiających się zarówno w Starym Testamencie, jak i w Koranie. Według eschatologii islamskiej symbolizują oni wrogie plemiona, narody lub krainy, dążące do zniszczenia ludu Bożego i zapowiadające koniec świata. Zgodnie z hadisem (Sahih Muslim), gdy pierwsze szeregi Goga i Magoga przejdą obok Jeziora Tyberiadzkiego (Morza Galilejskiego w Palestynie), wypiją z niego całą wodę. 
+
+
+      **Rosol i Moawiya** – jesteśmy duetem, w którym jeden z nas pisze poezje, a drugi rapuje. Mieszkamy w Tulkarm w Palestynie, więc poza trudnościami i cierpieniem, z którymi mierzymy się każdego dnia, dodatkowo napotykamy przeszkody również jako raperzy: nie mamy dostępu do studiów nagraniowych. Nasze utwory istnieją zatem tylko w formie tekstów, które wykonujemy na żywo – nic nie jest rejestrowane. Mimo braku możliwości nagrywania, nie przestajemy pisać. Po pierwsze dlatego, że – jako Palestyńczycy – nie możemy przestać. Po drugie, musimy pisać o tym, czym żyjemy, to dla nas rodzaj azylu. Walczymy o wszystko. [Rosol:] Chciałbym jeszcze dodać od siebie, że ta piosenka została napisana dla naszego przyjaciela, który zginął w obozie Nur Szams. I że ten utwór opowiada o morzu, od którego dzieli mnie 10 minut drogi od domu, a którego nigdy nie widziałem, chociaż mam już 20 lat.
 
       **Tłumaczenie z arabskiego**: Bartosz Pietrzak
       **Konsultacja z arabskiego**: Sanad Abu Assaf
