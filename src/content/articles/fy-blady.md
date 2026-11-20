@@ -8,6 +8,7 @@ translations:
     description: '-'
     body: |-
       # W moim kraju
+
       **Rosol i Moawiya**
 
       W moim kraju nie ma świadectw szkolnych,
@@ -15,10 +16,10 @@ translations:
 
       W moim kraju nie ma róż,
       nie ma żadnych kwiatów,
-      poza kwiatem, którym był Walid Zahra*.
+      poza kwiatem, którym był Walid Zahra\*.
 
       W moim kraju nie ma ptaków
-      innych niż nektarnik usfur al-szams**.
+      innych niż nektarnik usfur al-szams\*\*.
 
       Śnimy, jakbyśmy chcieli latać jak on
       w klatkach, w których nas zamykają.
@@ -32,7 +33,7 @@ translations:
 
       W moim kraju przez całe życie
       nie widzimy wschodu słońca
-      innego niż Nur Szams***.
+      innego niż Nur Szams\*\*\*.
 
       W moim kraju każdego dnia
       oglądamy ciemność
@@ -43,7 +44,7 @@ translations:
       ani jego plaż, ani jego bryzy
       i nawet się w nim nie kąpaliśmy.
 
-      Oni wypiją do cna Jezioro Tyberiadzkie****
+      Oni wypiją do cna Jezioro Tyberiadzkie\*\*\*\*
       i nasze morza będą martwe
       i nic nam nie zostawią.
 
@@ -98,28 +99,28 @@ translations:
 
       Jeszcze powrócą czasy, kiedy na ulicach powstaną bohaterowie.
 
-
       Al-Aksa jest nasza.
-
 
       Al-Aksa jest nasza, a wy 
       możecie co najwyżej narzucić swoje szekle.
-
 
       Obietnica wolnego człowieka to dług.
 
       Zbudujecie waszą świątynię po moim trupie.
 
-
       W świecie pełnym księżyców
       moim księżycem jest męczennik.
 
-
-
       \* Arab. zahra znaczy dosłownie „kwiat”. Walid Zahra był jednym z pięciu zabitych przez Siły Okupacyjne Izraela w grudniu 2023 r., kiedy wojsko izraelskie zrobiło nalot na Tulkarm i sąsiednie obozy uchodźców, w tym Nur Szams. Walid miał 22 lata.
-      \** Arab. ʿuṣfūr asz-szams (Cinnyris osea) znaczy dosłownie „ptak słońca” lub „wróbel słońca”, ang. Palestine sunbird, pol. nektarnik palestyński. Narodowy ptak Palestyny, powszechnie spotykany w Palestynie.
-      \***  Arab. nūr szams znaczy dosłownie „światło słońca” lub „światło słoneczne”. Jest to również nazwa palestyńskiego obozu dla uchodźców (Muchajjam Nur Szams) położonego na Zachodnim Brzegu Jordanu, w pobliżu miasta Tulkarm. Państwo izraelskie przeprowadza regularne ataki na Nur Szams, gdzie siły izraelskie zamordowały dziesiątki osób. Obecnie niemal cała ludność została przymusowo wysiedlona z obozu.
-      \**** Wers odwołuje się do postaci Goga i Magoga pojawiających się zarówno w Starym Testamencie, jak i w Koranie. Według eschatologii islamskiej symbolizują oni wrogie plemiona, narody lub krainy, dążące do zniszczenia ludu Bożego i zapowiadające koniec świata. Zgodnie z hadisem (Sahih Muslim), gdy pierwsze szeregi Goga i Magoga przejdą obok Jeziora Tyberiadzkiego (Morza Galilejskiego w Palestynie), wypiją z niego całą wodę. 
+
+
+      \*\* Arab. ʿuṣfūr asz-szams (Cinnyris osea) znaczy dosłownie „ptak słońca” lub „wróbel słońca”, ang. Palestine sunbird, pol. nektarnik palestyński. Narodowy ptak Palestyny, powszechnie spotykany w Palestynie.
+
+
+      \*\*\*  Arab. nūr szams znaczy dosłownie „światło słońca” lub „światło słoneczne”. Jest to również nazwa palestyńskiego obozu dla uchodźców (Muchajjam Nur Szams) położonego na Zachodnim Brzegu Jordanu, w pobliżu miasta Tulkarm. Państwo izraelskie przeprowadza regularne ataki na Nur Szams, gdzie siły izraelskie zamordowały dziesiątki osób. Obecnie niemal cała ludność została przymusowo wysiedlona z obozu.
+
+
+      \*\*\*\* Wers odwołuje się do postaci Goga i Magoga pojawiających się zarówno w Starym Testamencie, jak i w Koranie. Według eschatologii islamskiej symbolizują oni wrogie plemiona, narody lub krainy, dążące do zniszczenia ludu Bożego i zapowiadające koniec świata. Zgodnie z hadisem (Sahih Muslim), gdy pierwsze szeregi Goga i Magoga przejdą obok Jeziora Tyberiadzkiego (Morza Galilejskiego w Palestynie), wypiją z niego całą wodę. 
 
       **Tłumaczenie z arabskiego**: Bartosz Pietrzak
       **Konsultacja z arabskiego**: Sanad Abu Assaf
