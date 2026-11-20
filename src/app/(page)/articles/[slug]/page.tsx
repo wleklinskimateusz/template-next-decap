@@ -11,6 +11,7 @@ import type { ComponentProps } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import { ArticleLanguageView } from "./article-language-view";
 import styles from "./page.module.css";
 
 const EMPTY_ARTICLES_SLUG = "__no_articles__";
@@ -46,13 +47,27 @@ export async function generateMetadata({
   if (slug === EMPTY_ARTICLES_SLUG) {
     notFound();
   }
-  const { title, description, seoTitle, seoDescription, seoTags } =
-    await getArticleFileMetadata(slug);
+  const {
+    title,
+    description,
+    keywords,
+    seoTitle,
+    seoDescription,
+    seoTags,
+    translations,
+  } = await getArticleFileMetadata(slug);
+  const polishTranslation = translations?.find(
+    ({ language }) => language === "pl",
+  );
+  const metadataKeywords = [...(keywords ?? []), ...(seoTags ?? [])]
+    .map((keyword) => keyword.trim())
+    .filter(Boolean);
 
   return {
-    title: `${seoTitle || title} - teksty oporu`,
-    description: seoDescription || description,
-    keywords: seoTags || [],
+    title: `${polishTranslation?.title || seoTitle || title} - teksty oporu`,
+    description:
+      polishTranslation?.description || seoDescription || description,
+    keywords: [...new Set(metadataKeywords)],
     // metadataBase: new URL(""),
   };
 }
@@ -66,8 +81,19 @@ export default async function Page({
   if (slug === EMPTY_ARTICLES_SLUG) {
     notFound();
   }
-  const { title, description, date, category, image } =
+  const {
+    title,
+    date,
+    category,
+    image,
+    keywords,
+    language,
+    translations,
+  } =
     await getArticleFileMetadata(slug);
+  const polishTranslation = translations?.find(
+    ({ language }) => language === "pl",
+  );
 
   const safeSlug = path.basename(slug);
   const filePath = path.join(process.cwd(), "src/content/articles", `${safeSlug}.md`);
@@ -86,34 +112,55 @@ export default async function Page({
       <Link className={styles.backLink} href="/articles">
         <span aria-hidden="true">←</span> Wszystkie artykuły
       </Link>
-      <header className={styles.articleHeader}>
-        {image && (
-          <Image
-            className={styles.coverImage}
-            src={getArticleImageSrc(image)}
-            alt={title}
-            width={1200}
-            height={675}
-            sizes="(max-width: 680px) calc(100vw - 32px), 800px"
-            priority
-          />
-        )}
-        <p className={styles.eyebrow}>{category || "Czytaj szerzej"}</p>
-        <h1 className={styles.title}>{title}</h1>
-        <p className={styles.description}>{description}</p>
-        <div className={styles.meta}>
-          <time dateTime={date.toISOString()}>
-            {date.toLocaleDateString("pl-PL", {
-              day: "numeric",
-              month: "long",
-              year: "numeric",
-            })}
-          </time>
-        </div>
-      </header>
-      <div className={styles.content}>
-        <MDXRemote source={content} components={mdxComponents} />
-      </div>
+      <ArticleLanguageView
+        original={{
+          content: <MDXRemote source={content} components={mdxComponents} />,
+        }}
+        polish={
+          polishTranslation
+            ? {
+                content: (
+                  <MDXRemote
+                    source={polishTranslation.body}
+                    components={mdxComponents}
+                  />
+                ),
+              }
+            : undefined
+        }
+        originalLanguage={language}
+        image={
+          image ? (
+            <Image
+              className={styles.coverImage}
+              src={getArticleImageSrc(image)}
+              alt={polishTranslation?.title ?? title}
+              width={1200}
+              height={675}
+              sizes="(max-width: 680px) calc(100vw - 32px), 800px"
+              priority
+            />
+          ) : null
+        }
+        category={category}
+        date={date}
+      />
+      {keywords && keywords.length > 0 && (
+        <section className={styles.keywords} aria-labelledby="article-keywords">
+          <h2 className={styles.keywordsTitle} id="article-keywords">
+            Słowa kluczowe
+          </h2>
+          <ul className={styles.keywordList}>
+            {[...new Set(keywords.map((keyword) => keyword.trim()).filter(Boolean))].map(
+              (keyword) => (
+                <li className={styles.keyword} key={keyword}>
+                  {keyword}
+                </li>
+              ),
+            )}
+          </ul>
+        </section>
+      )}
     </article>
   );
 }

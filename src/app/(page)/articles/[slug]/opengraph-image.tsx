@@ -34,7 +34,10 @@ export default async function OpengraphImage({
       size,
     );
   }
-  const { title, date, image } = await getArticleFileMetadata(slug);
+  const { title, date, image, translations } =
+    await getArticleFileMetadata(slug);
+  const displayTitle =
+    translations?.find(({ language }) => language === "pl")?.title ?? title;
 
   const avatarElement = (
     <img
@@ -87,7 +90,7 @@ export default async function OpengraphImage({
                 textAlign: "center",
               }}
             >
-              {title}
+              {displayTitle}
             </h1>
             <p
               style={{
@@ -116,7 +119,7 @@ export default async function OpengraphImage({
       >
         <img
           src={`http://localhost:3000${getArticleImageSrc(image)}`}
-          alt={title}
+          alt={displayTitle}
           width={1200}
           height={630}
           style={{
@@ -147,7 +150,7 @@ export default async function OpengraphImage({
               lineHeight: 1.2,
             }}
           >
-            {title}
+            {displayTitle}
           </h1>
           <p
             style={{
