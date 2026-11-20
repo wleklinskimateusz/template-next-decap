@@ -4,7 +4,7 @@ description: '-'
 language: en
 translations:
   - language: pl
-    title: wiersze Nour Al-Huda Mosbeh, „Widmo głodu” i inne
+    title: Wiersze Nour Al-Huda Mosbeh, „Widmo głodu” i inne
     description: 'Wiersze Nour Al-Huda Mosbeh, poetki, artystki wizualna i twórczyni treści internetowych. Urodziła się w Gazie, gdzie wciąż mieszka. Poprzez twoją poezję wyraża surowe emocje, bolesną rzeczywistość i osobiste doświadczenia, z którymi przyszło jej się mierzyć w trakcie trwającego w Strefie Gazy ludobójstwa. W swojej twórczości porusza tematy głodu, straty, przetrwania, strachu oraz walki o zachowanie nadziei pośród niewyobrażalnego cierpienia. Dla Nour poezja to coś więcej niż tylko forma artystycznej ekspresji: to sposób na ocalenie wspomnień, dawanie świadectwa rzeczywistości, a także oddawanie głosu opowieściom, które nigdy nie powinny zostać zapomniane. Poprzez słowa i sztukę próbuje przekuć ból w coś, co można poczuć, zrozumieć i zapamiętać.'
     body: |-
       # **Zbiór poezji Nour Al-Huda Mosbeh** **Nour Al-Huda Mosbeh** 
