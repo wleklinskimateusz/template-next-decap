@@ -55,7 +55,7 @@
 }
 
 .heroTitle {
-  max-width: 10ch;
+  /* max-width: 10ch; */
   margin: 0;
   font-family: var(--font-display);
   font-size: clamp(3.5rem, 8vw, 7.3rem);
@@ -66,7 +66,7 @@
 }
 
 .heroSubtitle {
-  max-width: 450px;
+  /* max-width: 450px; */
   margin: 1.6rem 0 2rem;
   color: inherit;
   font-size: clamp(1rem, 1.5vw, 1.15rem);
@@ -299,6 +299,78 @@
   outline-offset: 4px;
 }
 
+.submission {
+  padding: 0 0 clamp(4rem, 8vw, 7rem);
+}
+
+.submissionInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: clamp(2rem, 5vw, 4rem);
+  border-radius: var(--radius-card);
+  background: var(--color-accent-dark);
+  color: var(--color-surface);
+}
+
+.submissionCopy {
+  max-width: 42rem;
+}
+
+.submissionEyebrow {
+  margin: 0 0 0.75rem;
+  color: #f0b09a;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.submissionCopy h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: -0.06em;
+  line-height: 1;
+}
+
+.submissionDescription {
+  margin: 1rem 0 0;
+  color: inherit;
+  line-height: 1.7;
+}
+
+.submissionLink {
+  display: inline-flex;
+  min-height: 48px;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.7rem 1rem;
+  border: 1px solid rgb(248 243 238 / 45%);
+  border-radius: 999px;
+  color: inherit;
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-decoration: none;
+  transition:
+    background 160ms ease,
+    border-color 160ms ease,
+    transform 160ms ease;
+}
+
+.submissionLink:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-surface);
+  background: rgb(248 243 238 / 12%);
+}
+
+.submissionLink:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
 @media (max-width: 760px) {
   .heroInner {
     min-height: auto;
@@ -314,6 +386,11 @@
     grid-template-columns: minmax(0, 1fr) minmax(270px, 1fr);
     gap: 1.5rem;
   }
+
+  .submissionInner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 560px) {
@@ -324,7 +401,7 @@
   }
 
   .heroTitle {
-    max-width: 9ch;
+    /* max-width: 9ch; */
     font-size: clamp(3.4rem, 16vw, 5rem);
   }
 
@@ -345,6 +422,11 @@
     min-height: 220px;
   }
 
+  .submissionLink {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
   .latestHeading {
     align-items: start;
   }
@@ -363,6 +445,10 @@
     transition: none;
   }
 
+  .submissionLink {
+    transition: none;
+  }
+
   .heroLink:hover {
     transform: none;
   }
@@ -372,6 +458,10 @@
   }
 
   .aboutLink:hover {
+    transform: none;
+  }
+
+  .submissionLink:hover {
     transform: none;
   }
 }

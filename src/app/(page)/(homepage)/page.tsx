@@ -15,6 +15,10 @@ const {
   aboutPromptLabel,
   aboutPromptText,
   aboutLinkText,
+  submissionEyebrow,
+  submissionTitle,
+  submissionDescription,
+  submissionEmail,
   seoTitle,
   seoDescription,
   seoTags,
@@ -81,6 +85,26 @@ export default async function Home() {
               </Link>
             </div>
           </div>
+        </div>
+      </section>
+      <section
+        className={styles.submission}
+        aria-labelledby="submission-heading"
+      >
+        <div className={`container ${styles.submissionInner}`}>
+          <div className={styles.submissionCopy}>
+            <p className={styles.submissionEyebrow}>{submissionEyebrow}</p>
+            <h2 id="submission-heading">{submissionTitle}</h2>
+            <p className={styles.submissionDescription}>
+              {submissionDescription}
+            </p>
+          </div>
+          <a
+            className={styles.submissionLink}
+            href={`mailto:${submissionEmail}`}
+          >
+            {submissionEmail} <span aria-hidden="true">↗</span>
+          </a>
         </div>
       </section>
     </>
